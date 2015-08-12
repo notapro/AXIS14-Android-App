@@ -1,0 +1,51 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" 
+      		android:orientation="horizontal"
+      		android:background="#3e3d38"
+            >
+
+    <com.davemorrissey.labs.subscaleview.PinView            
+        	android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+    <SlidingDrawer
+        android:id="@+id/slidingDrawer1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:content="@+id/content"
+        android:handle="@+id/handle" >
+
+        <Button
+            android:id="@+id/handle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Handle"
+            android:textColor="#000000"
+            android:background="@drawable/up"
+            />
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:orientation="vertical"
+            android:weightSum="10"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff" >
+            <TextView 
+                android:id="@+id/txtSlideInfo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="20sp"
+                android:padding="2dp"
+                android:textColor="#000000"
+                
+                android:autoLink="web|email|phone"
+    			android:linksClickable="true"
+                />
+        </LinearLayout>
+    </SlidingDrawer>
+    
+</FrameLayout>
